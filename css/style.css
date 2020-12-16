@@ -18,7 +18,7 @@ body {
     padding: 20px 0;
 }
 
-/* max-width helps with responsivity at a container */
+/* max-width helps with RESPONSIVITY at a container */
 .menu-container {
     max-width: 960px; 
     /* margin-left: auto;
@@ -57,5 +57,40 @@ a.menu-logo {
     padding: 10px;
     text-decoration: none;
     color: #fff;
+    font-size: 1.125em;
+}
+
+
+
+/* Intro */
+
+/* Background-size: cover HELPS WITH RESPONSIVITY, the image will adapt to it*/
+
+.intro {
+    background: url('/img/bg-intro.jpg') no-repeat center center;
+    background-size: cover;
+    padding: 150px 0;
+    /* margin-top: 150px; will pull the entire container */
+    text-align: center;
+    color: #fff;
+}
+
+.intro h1 {
+    text-transform: uppercase;
+    font-size: 3em;
+}
+
+.intro h1::after {
+    content: '';
+    display: block;
+    width: 20px;
+    height: 4px;
+    background: #FFF;
+    margin: 10px auto;
+    /* margin: somethinpx auto causes the separator to align with the center */
+}
+
+.intro p {
+    font-style: italic;
     font-size: 1.125em;
 }
