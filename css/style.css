@@ -1,0 +1,61 @@
+/* Reset the automatic styles from the browser */
+
+/* 1. Selecting all the tags to erase paddings and margins */
+
+body, h1, h2, h3, p, ul {
+    padding: 0px;
+    margin: 0px;
+}
+
+/* Defining the general font-family of the sites */
+body {
+    font-family: Georgia, serif;
+    color: #252525;
+}
+
+.menu {
+    background: #252525;
+    padding: 20px 0;
+}
+
+/* max-width helps with responsivity at a container */
+.menu-container {
+    max-width: 960px; 
+    /* margin-left: auto;
+    margin-right: auto; */
+    margin: 0 auto;
+}
+
+/* ClearFix added at the container to solve the problem of floating items */
+
+.menu-container::after, .menu-container::before{
+    content: '';
+    display: table;
+    clear: both;
+}
+
+a.menu-logo {
+    display: block;
+    float: left;
+    margin-left: 10px;
+}
+
+.menu-nav {
+    float: right;
+    margin-right: 10px;
+}
+
+/* To put elements from a list side by side, on the same level, very common at nav bars */
+.menu-nav li {
+    display: inline-block;
+}
+
+/* Padding in a bottom is good for mobile devices. It expands the click area */
+/* em = PX / 16 */
+.menu-nav a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.125em;
+}
