@@ -28,7 +28,7 @@ body {
 
 /* ClearFix added at the container to solve the problem of floating items */
 
-.menu-container::after, .menu-container::before{
+.menu-container::after, .menu-container::before {
     content: '';
     display: table;
     clear: both;
@@ -50,7 +50,7 @@ a.menu-logo {
     display: inline-block;
 }
 
-/* Padding in a bottom is good for mobile devices. It expands the click area */
+/* Padding in a button is good for mobile devices. It expands the click area */
 /* em = PX / 16 */
 .menu-nav a {
     display: block;
@@ -64,7 +64,7 @@ a.menu-logo {
 
 /* Intro */
 
-/* Background-size: cover HELPS WITH RESPONSIVITY, the image will adapt to it*/
+/* Background-size: cover HELPS WITH RESPONSIVITY, the image will adapt to the screen*/
 
 .intro {
     background: url('/img/bg-intro.jpg') no-repeat center center;
@@ -87,10 +87,74 @@ a.menu-logo {
     height: 4px;
     background: #FFF;
     margin: 10px auto;
-    /* margin: somethinpx auto causes the separator to align with the center */
+    /* margin: 10px auto - causes the separator to align with the center */
 }
 
 .intro p {
     font-style: italic;
     font-size: 1.125em;
+}
+
+
+
+/* Sobre */
+
+.sobre {
+    padding: 60px 0; /* isolate container */
+}
+
+/* max-width helps with RESPONSIVITY at a container */
+.sobre-container {
+    max-width: 960px; 
+    /* margin-left: auto;
+    margin-right: auto; */
+    margin: 0 auto;
+}
+
+/* ClearFix added at the container to solve the problem of floating items */
+
+.sobre-container::after, .sobre-container::before {
+    content: '';
+    display: table;
+    clear: both;
+}
+
+.sobre h2 {
+    text-align: center;
+    font-size: 2.25em;
+    margin-bottom: 60px;
+}
+
+.sobre-item {
+    width: 460px;
+    float: left;
+    margin: 0 10px;
+}
+
+.sobre-item img {
+    display: block; /* as a pattern tag img has approximately 2px around, and display block exclude it*/
+    max-width: 100%;
+}
+
+.sobre-item h3 {
+    font-size: 2.25em;
+    line-height: 1em;
+    background: #252525;
+    width: 220px;
+    color: #FFF;
+    font-style: italic;
+    font-weight: normal;
+    text-align: center;
+    padding: 5px 0 10px 0;
+    top: -25px;
+    position: relative; /* It makes the item overlap with the container */
+}
+
+.sobre > p {
+    font-size: 1.125em;
+    line-height: 1.4em;
+    font-style: italic;
+    text-align: center;
+    margin: 20px auto;
+    max-width: 460px;
 }
